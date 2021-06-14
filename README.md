@@ -156,3 +156,6 @@
  ```
  
  
+## 4. Member
+ 정현서 HyunSeo Jung, @BSS / [hsjung02@Github](http://github.com/hsjung02)
+ 정상 Sang Jung, @BSS / [withsang@Github](http://github.com/withsang)
