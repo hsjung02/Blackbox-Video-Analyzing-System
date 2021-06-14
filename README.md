@@ -24,7 +24,7 @@
   ```
 ### 3.2 차선 검출
  Canny edge 알고리즘을 이용해 차선을 검출하였다
- ![차선 검출](/img/chaseon.png)
+ ![차선 검출](/img/chaseon.png){: height="100"}
  ```python
  def doit(inf,newmap,frcount,ROI_range):
     chaseon=[]
