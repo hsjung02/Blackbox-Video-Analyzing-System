@@ -8,6 +8,7 @@
  
 ## 3. 주요 코드
 ### 3.1 영상을 프레임 단위로 분리
+ 영상 분석을 하기 위해 영상을 프레임 단위로 분리하여 저장하였다
  ```python
  def frame(filename, portal): #(파일 경로, 저장 경로)
     vid=cv2.VideoCapture(filename) #비디오 보기
@@ -22,6 +23,8 @@
             break
   ```
 ### 3.2 차선 검출
+ Canny edge 알고리즘을 이용해 차선을 검출하였다
+ ![차선 검출](/img/chaseon.png)
  ```python
  def doit(inf,newmap,frcount,ROI_range):
     chaseon=[]
@@ -82,6 +85,8 @@
  ```
 
 ### 3.3 충돌 시점 결정
+ 차량 전방의 RGB 평균값이 급격하게 변하는 시점이 사고 시점이라 판단하였다. 전방에 차선에 접하는 사다리꼴 영역을 만들고, 그 영역 내의 RGB 평균값을 계산하였다.
+ ![사다리꼴](/img/timing.png)
  ```python
  def hoit(search_range,newmap,av,inf):
     left_count=0
@@ -142,6 +147,8 @@
  ```
 
 ### 3.6 시각화
+ 사용자에게 결과를 글과 그래프로 시각화하여 보여준다
+ ![팝업](/img/show1.png) ![그래프](/img/show2.png)
  ```python
  def show(information): #information=[영상_경로, 앞차인지_뒷차인지, 앞차_특징, 뒷차_특징, 앞차_추가_과중, 뒷차_추가_과중, 사건유형번호, 앞차_과실비율, 뒷차_과실비율]
 
