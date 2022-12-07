@@ -62,7 +62,7 @@ ROI_range[2]=[ROI_range[0][0],ROI_range[3][1]]
 av=['sam']
 tempchaseon=bss1519.doit(newmap,5,ROI_range)  #5프레임 정도 미리 차선 따놓기
 
-search_range=bss1519.makesr(tempchaseon,ROI_range,inf)  #내 차선에 내접하는 사다리꼴 만들
+search_range, =bss1519.makesr(tempchaseon,ROI_range,inf)  #내 차선에 내접하는 사다리꼴 만들
 
 direction,frcount=bss1519.hoit(search_range,newmap,av,inf)  #두 차의 위치관계 #left or right
 img=cv2.imread(newmap+"/1.png")
